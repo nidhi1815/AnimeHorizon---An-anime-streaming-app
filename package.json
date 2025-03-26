@@ -1,0 +1,21 @@
+{
+  "name": "animeapp",
+  "version": "1.0.0",
+  "description": "a fullstack app for watching anime",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "animeApp"
+  ],
+  "author": "Nidhi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
+  }
+}
