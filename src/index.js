@@ -2,7 +2,16 @@ import dotenv from "dotenv";
 // 1) Remove the custom path and let dotenv load the `.env` file automatically
 dotenv.config();  
 import connectDB from "./db/index.js";
-connectDB();
+import { app } from "./app.js";
+connectDB()
+.then(()=>{
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`server is running at port : ${process.env.PORT}`)
+    })
+})
+.catch((err)=>{
+    console.log("MongoDB connection failed !!", err);
+})
 
 
 
